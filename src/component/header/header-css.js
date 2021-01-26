@@ -16,7 +16,14 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: 40,
   },
   input: {
-    // marginLeft: theme.spacing(1),
-    flex: 1,
+    marginLeft: theme.spacing(1),
+    width: '100%'
   },
+  logo: {
+    textDecoration: 'none',
+    // color: 'black',
+    // '& a': {
+    //   textDecoration: 'npne',
+    // }
+  }
 }));
