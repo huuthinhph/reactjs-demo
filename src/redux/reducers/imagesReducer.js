@@ -1,4 +1,4 @@
-// import actionTypes from '../actions';
+import * as actionTypes from '../actions/actionTypes';
 
 const initState = {
   data: ['abcabc', '11111'],
@@ -6,6 +6,7 @@ const initState = {
 
 const imagesReducer = (state = initState, action) => {
   return state;
+    const a = actionTypes.REQUEST_GET_IMAGES;
   // switch (action.type) {
   //   case actionTypes.ADD_TO_CART:
   //     return addToCart(state, action);

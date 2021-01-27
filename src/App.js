@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import Header from './component/header';
 import Navigation from './component/navigation';
 import Content from './component/content';
+import PaginationComponent from './component/pagination';
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,6 +32,7 @@ function App() {
             <Loading />
           </Route> */}
         </Switch>
+        <PaginationComponent />
       </Container>
     </Router>
   );

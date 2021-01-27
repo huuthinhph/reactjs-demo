@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 const Content = (props) => {
 	const classes = useStyles();
   const params = useParams();
+  console.log('params', params);
   const initialState = {
     isLoading: false,
     arrImages: [],
@@ -15,7 +16,7 @@ const Content = (props) => {
   const [state, setState] = useState(initialState);
 
   const checkSearch = (keyWord) => {
-    if (keyWord.indexOf('search=') !== -1) {
+    if (keyWord.indexOf('?search=') !== -1) {
       return keyWord.slice(7);
     } else {
       return keyWord;
@@ -44,6 +45,7 @@ const Content = (props) => {
   }
 
   useEffect(() => {
+    console.log(checkSearch(params.id));
     if (checkSearch(params.id) !== '') {
       getData(checkSearch(params.id));
     };

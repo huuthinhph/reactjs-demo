@@ -14,16 +14,12 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     marginTop: 40,
+    '& a': {
+      textDecoration: 'none',
+    }
   },
   input: {
     marginLeft: theme.spacing(1),
     width: '100%'
   },
-  logo: {
-    textDecoration: 'none',
-    // color: 'black',
-    // '& a': {
-    //   textDecoration: 'npne',
-    // }
-  }
 }));
