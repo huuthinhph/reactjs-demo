@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {apiKey} from '../../api/config';
+import {apiKey, baseURL} from '../config';
 
 export const getImages = (keyWord) => {
   const configs = {
@@ -13,7 +13,7 @@ export const getImages = (keyWord) => {
       nojsoncallback: 1,
     },
     method: 'get',
-    baseURL: 'https://api.flickr.com/services/rest/',
+    baseURL,
   };
   const images = axios.request(configs);
   return images;
